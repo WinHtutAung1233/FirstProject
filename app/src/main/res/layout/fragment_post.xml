@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.post.PostFragment"
+    android:background="@drawable/main_universe">
+
+    <TextView
+        android:id="@+id/txt_title_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Post View"
+        android:textSize="30dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout_one"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title_post">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D5A20C">
+
+            <TextView
+                android:id="@+id/txt_post_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:text="Food Name"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/value_post_name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:background="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@id/txt_post_name"
+                app:layout_constraintLeft_toRightOf="@id/txt_post_name" />
+
+            <TextView
+                android:id="@+id/txt_post_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Phone"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/txt_post_name"
+                app:layout_constraintTop_toBottomOf="@id/txt_post_name" />
+
+            <EditText
+                android:id="@+id/value_post_phone"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@id/txt_post_phone"
+                app:layout_constraintLeft_toLeftOf="@id/value_post_name" />
+
+            <TextView
+                android:id="@+id/txt_post_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Address"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/txt_post_phone"
+                app:layout_constraintTop_toBottomOf="@id/txt_post_phone" />
+
+            <EditText
+                android:id="@+id/value_post_address"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@id/txt_post_address"
+                app:layout_constraintLeft_toLeftOf="@id/value_post_name" />
+
+            <TextView
+                android:id="@+id/txt_post_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Price"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/txt_post_address"
+                app:layout_constraintTop_toBottomOf="@id/txt_post_address" />
+
+            <EditText
+                android:id="@+id/value_post_price"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@id/txt_post_price"
+                app:layout_constraintLeft_toLeftOf="@id/value_post_name" />
+
+            <TextView
+                android:id="@+id/txt_post_foodtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Food Type:"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/txt_post_price"
+                app:layout_constraintTop_toBottomOf="@id/txt_post_price" />
+
+            <RadioGroup
+                android:id="@+id/questionRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/txt_post_foodtype"
+                app:layout_constraintLeft_toLeftOf="@id/value_post_name">
+
+
+                <RadioButton
+                    android:id="@+id/food_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Food"
+                    app:buttonTint="#E4590C" />
+
+                <RadioButton
+                    android:id="@+id/drink_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Drink"
+                    app:buttonTint="#39F110" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_post_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Image"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/txt_post_foodtype"
+                app:layout_constraintTop_toBottomOf="@id/txt_post_foodtype" />
+
+            <Button
+                android:id="@+id/btn_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload"
+                android:background="@drawable/round_button"
+                app:layout_constraintLeft_toLeftOf="@id/value_post_name"
+                app:layout_constraintTop_toTopOf="@id/txt_post_img" />
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/sign"
+                app:layout_constraintLeft_toRightOf="@id/btn_upload"
+                app:layout_constraintTop_toTopOf="@id/txt_post_img" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_request_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+        android:text="ပေးပို့မည်"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_one" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

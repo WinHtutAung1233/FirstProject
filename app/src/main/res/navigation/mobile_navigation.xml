@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.myproject.ui.home.HomeFragment"
+        android:label="FoodsNewsFeed"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_postFragment"
+            app:destination="@id/postFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.myproject.ui.gallery.GalleryFragment"
+        android:label="Report To Admin"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.myproject.ui.slideshow.SlideshowFragment"
+        android:label="Good Restruant Name"
+        tools:layout="@layout/fragment_slideshow" />
+
+
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.example.myproject.ui.share.ShareFragment"
+        android:label="Logout"
+        tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.example.myproject.ui.post.PostFragment"
+        android:label="Post View"
+        tools:layout="@layout/fragment_post" >
+        <action
+            android:id="@+id/action_postFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+
+</navigation>

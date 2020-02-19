@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_universe">
+
+
+    <TextView
+        android:id="@+id/txt_report_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="အကြံပြုစာ"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_report_name"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_report_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D5A20C">
+
+            <TextView
+                android:id="@+id/txt_report_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:text="နာမည်နှင့်ဖုန်းနံပါတ်ရိုက်ထည့်ပါ"
+
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/layout_one"
+                app:layout_constraintTop_toTopOf="@id/layout_one" />
+
+            <EditText
+                android:id="@+id/value_report_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:hint="Eg:(U Hla)09XXXXXX"
+                android:textColorHint="#A6000000"
+                android:background="@drawable/textbox_round"
+                app:layout_constraintLeft_toLeftOf="@id/txt_report_name"
+                app:layout_constraintTop_toBottomOf="@id/txt_report_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_report_context"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintLeft_toLeftOf="@id/card_report_name"
+        app:layout_constraintTop_toBottomOf="@id/card_report_name">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D5A20C">
+
+            <TextView
+                android:id="@+id/txt_context"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:text="ဆိုင်ကြော်ငြာလိပ်စာ(သို့)မေးလိုသည်ကိုရေးပါ"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/layout_two"
+                app:layout_constraintTop_toTopOf="@id/layout_two" />
+            <EditText
+                android:id="@+id/report_context"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_margin="20sp"
+                android:background="@drawable/textbox_round"
+                app:layout_constraintTop_toBottomOf="@id/txt_context"
+                app:layout_constraintLeft_toLeftOf="@+id/txt_context"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/card_report_context"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="ပေးပို့မည်"
+        android:background="@drawable/round_button"
+        android:layout_marginTop="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
