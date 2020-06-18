@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.myproject.ui.home.HomeFragment"
+        android:name="com.whapj.myproject.ui.home.HomeFragment"
         android:label="FoodsNewsFeed"
         tools:layout="@layout/fragment_home" >
         <action
@@ -17,13 +17,13 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.myproject.ui.gallery.GalleryFragment"
+        android:name="com.whapj.myproject.ui.gallery.GalleryFragment"
         android:label="Report To Admin"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.myproject.ui.slideshow.SlideshowFragment"
+        android:name="com.whapj.myproject.ui.slideshow.SlideshowFragment"
         android:label="Good Restruant Name"
         tools:layout="@layout/fragment_slideshow" />
 
@@ -31,12 +31,12 @@
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="com.example.myproject.ui.share.ShareFragment"
+        android:name="com.whapj.myproject.ui.share.ShareFragment"
         android:label="Logout"
         tools:layout="@layout/fragment_share" />
     <fragment
         android:id="@+id/postFragment"
-        android:name="com.example.myproject.ui.post.PostFragment"
+        android:name="com.whapj.myproject.ui.post.PostFragment"
         android:label="Post View"
         tools:layout="@layout/fragment_post" >
         <action
